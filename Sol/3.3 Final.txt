@@ -1,0 +1,81 @@
+function t33()
+I=imread('3.3.jpg');
+imhist(I);
+im=rgb2gray(I);
+h=fspecial('average',[5 5]);
+filter_image=imfilter(im,h);
+imshow(filter_image);
+i=edge(filter_image,'canny',0.1);
+imshow(i);
+s =strel('sphere',2);
+I3 = imdilate(i,s);
+figure,imshow(I3);
+
+[centers, radii, metric] = imfindcircles(I3,[10 20],'ObjectPolarity','bright', ...
+          'Sensitivity',0.93,'EdgeThreshold',0.1);
+disp(radii);
+centersStrong5 = centers(1:10,:); 
+radiiStrong5 = radii(1:10);
+metricStrong5 = metric(1:10);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+[centers, radii, metric] = imfindcircles(I3,[20 34],'ObjectPolarity','bright', ...
+          'Sensitivity',0.93,'EdgeThreshold',0.1);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
+[centers, radii, metric] = imfindcircles(I3,[35 65],'ObjectPolarity','bright', ...
+          'Sensitivity',0.93,'EdgeThreshold',0.1);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
+[centers, radii, metric] = imfindcircles(I3,[65 90],'ObjectPolarity','bright', ...
+          'Sensitivity',0.93,'EdgeThreshold',0.1);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
+[centers, radii, metric] = imfindcircles(I3,[90 120],'ObjectPolarity','bright', ...
+          'Sensitivity',0.93,'EdgeThreshold',0.1);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+[centers, radii, metric] = imfindcircles(I3,[150 180],'ObjectPolarity','bright', ...
+          'Sensitivity',0.93,'EdgeThreshold',0.1);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
+[centers, radii, metric] = imfindcircles(I3,[170 220],'ObjectPolarity','bright', ...
+          'Sensitivity',0.93,'EdgeThreshold',0.1);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
+[centers, radii, metric] = imfindcircles(I3,[210 270],'ObjectPolarity','bright', ...
+          'Sensitivity',0.93,'EdgeThreshold',0.1);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');

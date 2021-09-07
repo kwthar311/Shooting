@@ -1,0 +1,65 @@
+function t22()
+I=imread('2.1.png');
+I1=rgb2gray(I);
+K = medfilt2(I1);
+imshow(K);
+[centers, radii, metric] = imfindcircles(K,[2 10],'ObjectPolarity','bright', ...
+          'Sensitivity',0.92);
+disp(radii);
+centersStrong5 = centers(1:14,:); 
+radiiStrong5 = radii(1:14);
+metricStrong5 = metric(1:14);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+[centers, radii, metric] = imfindcircles(K,[10 20],'ObjectPolarity','bright', ...
+          'Sensitivity',0.92);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
+[centers, radii, metric] = imfindcircles(K,[30 60],'ObjectPolarity','bright', ...
+          'Sensitivity',0.92);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
+[centers, radii, metric] = imfindcircles(K,[20 190],'ObjectPolarity','bright', ...
+          'Sensitivity',0.92);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
+[centers, radii, metric] = imfindcircles(K,[40 210],'ObjectPolarity','bright', ...
+          'Sensitivity',0.92);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+[centers, radii, metric] = imfindcircles(K,[32 210],'ObjectPolarity','dark', ...
+          'Sensitivity',0.92);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+[centers, radii, metric] = imfindcircles(K,[100 130],'ObjectPolarity','dark', ...
+          'Sensitivity',0.92);
+disp(radii);
+centersStrong5 = centers(1:1,:); 
+radiiStrong5 = radii(1:1);
+metricStrong5 = metric(1:1);
+viscircles(centersStrong5, radiiStrong5,'EdgeColor','b');
+
+
